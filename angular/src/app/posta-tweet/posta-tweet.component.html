@@ -1,0 +1,29 @@
+<!-- <div class="main-div">
+    <div class="container mt-10"> -->
+        <mat-card >
+                    <button mat-icon-button class="btn-lg float-left" (click)="onCancal()">
+                        <mat-icon >cancel</mat-icon>
+                    </button>
+                <div class="head">
+                   <h3 >Don't miss out!</h3>
+                </div>
+              <mat-card-content>
+            <form class="example-form"   [formGroup]="fg" (ngSubmit)="onSubmit()">
+                <mat-form-field class="example-full-width" appearance="fill" (ngSubmit)="onSubmit()">
+                  <mat-label>Tweet about something!</mat-label>
+                  <textarea matInput formControlName="Tweet" #message placeholder="What's happpening?"></textarea>
+                  <mat-hint align="start"><strong>Ex: How was your day? </strong> </mat-hint>
+                  <mat-hint align="end">{{message.value.length}} / 140</mat-hint>
+                </mat-form-field>
+                <button mat-icon-button class="btn-lg float-right">
+                    <mat-icon>send</mat-icon>
+                </button>
+              </form>
+              </mat-card-content>
+              <mat-card-footer>
+               
+              </mat-card-footer>
+        </mat-card>
+    <!-- </div>
+    
+</div> -->

@@ -1,0 +1,40 @@
+.head{
+  text-align: center;
+  display: inline-block;
+    margin-left: 150px;
+}
+
+.main-div{
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+   
+  }
+  mat-card{
+      height: 400px;
+      width: 550px;
+      padding: 10px;
+      border-radius: 25px;
+     
+      margin-top: 30px;
+      margin-left: 200px;
+  }
+  textarea{
+      height: 250px;
+      font-size: medium;
+  }
+  mat-label,mat-hint{
+    font: large;
+    font-weight: bold;
+    font-size: large
+  }
+
+  mat-form-field{
+    width: 450px;
+  }
+  mat-card-content{
+      margin-left: auto;
+      text-align: center;
+  }
