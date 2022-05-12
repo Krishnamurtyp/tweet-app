@@ -1,0 +1,26 @@
+
+<div class="container">
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+        <span matPrefix> </span>
+        <input type="text" matInput placeholder="Who are you looking for?" name= "search" [(ngModel)]= "search" (ngModelChange)="Search()">
+        <button matSuffix mat-button ><mat-icon >search</mat-icon></button>
+        </mat-form-field>
+        <br/>
+        </form>
+        <div  class="col-md-8 mt-4" name="tweets" *ngFor= "let user of arr; index as i" >
+        <mat-card >
+            <div class="tweets">
+                <div class="row">
+                    <div class="col-sm-1">
+                        <img src="assets/PersonIcon.jpg" width="30" height="30" alt="">
+                    </div>
+                    <div class="col">
+                        <p>{{user}}</p>
+                    </div>
+                    
+                </div>
+           </div>
+        </mat-card>
+        </div>
+</div>
