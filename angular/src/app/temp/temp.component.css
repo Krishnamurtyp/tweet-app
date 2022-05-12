@@ -1,0 +1,52 @@
+/* 
+mat-card{
+    border: 2px solid rgb(130, 130, 250);
+    border-radius: 10px;
+    background-color:rgb(162, 216, 218);
+    width: 500px;
+}
+
+mat-sidenav {
+    width: 170px;
+    background-color:rgba(131, 167, 245, 0.582);
+    color: black;
+  
+  }
+  app-user-details{
+    background-color: rgb(130, 159, 238);
+  }
+  .container > .col > .row > p{
+    font-size: small;
+    display: inline;
+    font-weight: bold;
+  }
+
+.container{
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 200px;
+}
+
+.example-container{
+  margin-top: 0px;
+}
+.content{
+  float: left;
+  margin-left: 200px;
+}
+#navbarNav{
+  margin-left: 400px;
+}
+.navbar{
+ color: rgb(223, 22, 22);
+}
+
+li{
+  margin-left: 20px;
+}
+
+#HeadName{
+  font-size: medium;
+  font-weight: bold;
+  margin-left: 10px;
+} */

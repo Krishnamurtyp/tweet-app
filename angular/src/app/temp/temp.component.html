@@ -1,0 +1,39 @@
+<div *ngIf="display==0">
+    <div class="content">
+        <div class="row">
+            <div  class="col-md-8 mt-4" name="tweets" *ngFor= "let tweet of tw; index as i" >
+                <mat-card >
+                <div class="tweets">
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <img src="assets/PersonIcon.jpg" width="30" height="30" alt="">
+                        </div>
+                        <div class="col">
+                            <p> @{{tweet.userName}}  {{tweet.created |  date:"MM/dd/YY" }}</p>
+                        </div>
+                        
+                    </div>
+              {{tweet.tweet}}
+                    <div class="row">
+                       <div class="col-sm-3">
+                        <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon" (click)="likeButton(i)">
+                            <!-- <mat-icon>favorite</mat-icon> -->
+                            <mat-icon   [matBadge]="tweet.like" matBadgeColor="warn">favorite</mat-icon>
+                          </button>
+                        </div>
+                        <div class="col-sm-3">
+                            <button mat-icon-button [routerLink]="['reply']" (click)="reply(i)"> 
+                                <!-- <mat-icon>favorite</mat-icon> -->
+                                <mat-icon>comments</mat-icon>
+                            </button>
+                        </div>
+                  </div>
+               </div>
+            </mat-card>
+           </div>
+        </div>
+        </div>
+        </div>
+<div *ngIf="display==1">
+    <app-reply [replyId]="replyId"></app-reply>
+</div>
