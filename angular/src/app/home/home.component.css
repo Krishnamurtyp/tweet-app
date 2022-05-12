@@ -1,0 +1,72 @@
+mat-card{
+    border: 2px solid rgb(130, 130, 250);
+    border-radius: 10px;
+    background-color: rgb(162, 216, 218);
+}
+
+mat-sidenav {
+    width: 170px;
+    background-color:rgba(131, 167, 245, 0.582);
+    color: black;
+  
+  }
+  app-user-details{
+    background-color: rgb(180, 231, 188);
+  }
+  .container > .col > .row > p{
+    font-size: small;
+    display: inline;
+    font-weight: bold;
+  }
+
+.container{
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 220px;
+  background-color: rgb(162, 216, 218);
+  height: 650px;
+  
+}
+
+.example-container{
+  margin-top: 0px;
+}
+.content{
+  float: left;
+}
+#navbarNav{
+  margin-left: 400px;
+}
+.navbar{
+ color: rgb(223, 22, 22);
+}
+
+li{
+  margin-left: 20px;
+}
+
+#HeadName{
+  font-size: medium;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+#routerContent{
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+.postatweet{
+  margin-top: 100px;
+}
+nav {
+  background-color: black;
+}
+footer {
+  background-color: black;
+  text-align: center;
+  height: 40px;
+  padding: 5px;
+  color: aliceblue;
+}
