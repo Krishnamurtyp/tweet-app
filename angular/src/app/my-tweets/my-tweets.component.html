@@ -1,0 +1,63 @@
+<div *ngIf="display==0">
+<div class="container-fluid">
+    <div class="content">
+    <div class="row ">
+        <div  class="col-md-8 mt-4" name="tweets" *ngFor= "let tweet of tw ;  index as i" >
+            <mat-card >
+            <div class="tweets">
+                <div class="row">
+                    <div class="col-sm-1">
+                        <img src="assets/PersonIcon.jpg" width="30" height="30" alt="">
+                    </div>
+                    <div class="col">
+                        <p>    @{{tweet.userName}}  {{tweet.created |  date:"MM/dd/YY" }}</p>
+                    </div>
+                </div>
+          {{tweet.tweet}}
+                <div class="row">
+                   <div class="col-sm-3">
+                    <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+                        <!-- <mat-icon>favorite</mat-icon> -->
+                        <mat-icon   [matBadge]="tweet.like" matBadgeColor="warn">favorite</mat-icon>
+                      </button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button mat-icon-button [routerLink]="['reply']" (click)="reply(i)"> 
+                            <!-- <mat-icon>favorite</mat-icon> -->
+                            <mat-icon>comments</mat-icon>
+                        </button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button mat-icon-button (click)="editTweet(i)">
+                            <!-- <mat-icon>favorite</mat-icon> -->
+                            <mat-icon>edit</mat-icon>
+                          </button>
+                    </div>
+                    <div class="col-sm-3">
+                        <button mat-icon-button (click)="DeleteTweet(i)">
+                            <!-- <mat-icon>favorite</mat-icon> -->
+                            <mat-icon>delete</mat-icon>
+                          </button>
+                    </div>
+              </div>
+           </div>
+           <div *ngIf="hide==tweet.id">
+               <form (ngSubmit)="onSubmit(i)" [formGroup]="fg">
+            <mat-form-field appearance="standard" class="NewTweet">
+                <mat-label>Edit your Tweet</mat-label>
+                <input matInput placeholder="Enter New Tweet" formControlName="newTweet">
+                </mat-form-field>
+                <button mat-icon-button >
+                    <mat-icon>send</mat-icon>
+                </button>
+            </form>
+           </div>
+        </mat-card>
+       </div>
+    </div>
+ </div>
+</div>
+</div>
+<div *ngIf="display==1">
+    <app-reply [replyId]="replyId"></app-reply>
+</div>
