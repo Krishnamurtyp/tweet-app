@@ -1,0 +1,17 @@
+#navbarNav{
+    margin-left: 400px;
+}
+.navbar{
+   color: rgb(223, 22, 22);
+  
+}
+
+li{
+    margin-left: 20px;
+}
+
+#HeadName{
+    font-size: medium;
+    font-weight: bold;
+    margin-left: 10px;
+}
