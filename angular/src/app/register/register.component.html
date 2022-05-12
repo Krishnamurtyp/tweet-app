@@ -1,0 +1,68 @@
+<div class="wrapper">
+    <div class="container">
+    <form [formGroup]="fg" (ngSubmit)="onSubmit()">
+        <div class="row ">
+            <div class="col-md-12">
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>First Name</mat-label>
+                <input matInput  formControlName="firstname">
+               
+                <mat-error *ngIf="cltr('firstname').errors?.['required']">FirstName is required</mat-error>
+                 </mat-form-field>
+            </div>
+</div>
+<div class="row ">
+    <div class="col-md-6 ">
+    <mat-form-field appearance="outline" class="password">
+        <mat-label>Email ID</mat-label>
+        <input matInput formControlName="email">
+        <mat-icon matSuffix>email</mat-icon>
+        <mat-error *ngIf="cltr('email').errors?.['required']">Email is required</mat-error>
+                    <mat-error *ngIf="cltr('email').errors?.['pattern']">Please enter valid email</mat-error>
+         </mat-form-field>
+    </div>
+    <div class="col-md-6">
+        <mat-form-field appearance="outline" class="password">
+            <mat-label>UserName</mat-label>
+            <input matInput formControlName="username">
+            <mat-error *ngIf="cltr('username').errors?.['required']">username is required</mat-error>
+             </mat-form-field>
+    </div>
+</div>
+<div class="row ">
+    <div class="col-md-6">
+        <mat-form-field appearance="outline" class="password">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'"  formControlName="password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="cltr('password').errors?.['required']">Password is required</mat-error>
+          </mat-form-field>
+    </div>
+    <div class="col-md-6">
+        <mat-form-field  appearance="outline" class="password">
+            <mat-label>Select DOB</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dob">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="cltr('dob').errors?.['required']">DOB is required</mat-error>
+        </mat-form-field>                  
+    </div>
+</div>
+<div class="row ">
+    <div class="col-md-6">
+        <mat-label>Gender:</mat-label>
+        <mat-radio-group  class="margin-right" formControlName="gender">
+            <mat-radio-button value="male"> Male </mat-radio-button>
+            <mat-radio-button value="female"> Female </mat-radio-button>
+        </mat-radio-group>
+    </div>
+</div>
+<p>* Fields are mandatory</p>
+    <div class="full-width">
+        <button mat-raised-button color="primary" type="submit"  [disabled]="!fg.valid">Submit</button>
+    </div>
+</form>
+    </div>
+</div>
